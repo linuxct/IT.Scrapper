@@ -1,0 +1,10 @@
+﻿{
+  "profiles": {
+    "IT.Scrapper.WorkerService": {
+      "commandName": "Project",
+      "environmentVariables": {
+        "DOTNET_ENVIRONMENT": "Development"
+      }
+    }
+  }
+}

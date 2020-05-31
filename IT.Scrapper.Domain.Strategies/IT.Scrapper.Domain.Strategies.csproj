@@ -1,0 +1,19 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+    <PropertyGroup>
+        <TargetFramework>netcoreapp3.1</TargetFramework>
+        <RootNamespace>IT.Scrapper.Domain.Strategies</RootNamespace>
+    </PropertyGroup>
+
+    <ItemGroup>
+      <None Remove="appsettings.json" />
+      <Content Include="strategies.json">
+        <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      </Content>
+    </ItemGroup>
+
+    <ItemGroup>
+      <PackageReference Include="AngleSharp" Version="1.0.0-alpha-819" />
+    </ItemGroup>
+
+</Project>

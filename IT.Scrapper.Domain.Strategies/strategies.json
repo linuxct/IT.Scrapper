@@ -1,0 +1,75 @@
+[
+  {
+    "url": "https://www.quo.es/amp",
+    "linksStrategy": [
+      {
+        "order": 1,
+        "type": "xpath",
+        "value": "//a[contains(@href, '/q') and contains(@href, '/amp')]"
+      }
+    ],
+    "contentStrategy": [
+      {
+        "order": 1,
+        "type": "xpath",
+        "value": "//*[@class='cntn-wrp artl-cnt']//p"
+      },
+      {
+        "order": 2,
+        "type": "apply",
+        "value": "textScope"
+      }
+    ],
+    "titleStrategy": [
+      {
+        "order": 1,
+        "type": "xpath",
+        "value": "//*[@class='amp-post-title']"
+      },
+      {
+        "order": 2,
+        "type": "apply",
+        "value": "textScope"
+      }
+    ]
+  },
+  {
+    "url": "https://www.muyinteresante.es/",
+    "linksStrategy": [
+      {
+        "order": 1,
+        "type": "xpath",
+        "value": "//a[contains(@href, '/articulo/') and not(contains(@href, 'www.'))]"
+      },
+      {
+        "order": 2,
+        "type": "regex",
+        "value": "\\d*$"
+      }
+    ],
+    "contentStrategy": [
+      {
+        "order": 1,
+        "type": "xpath",
+        "value": "//*[@class='paragraph--text']//p"
+      },
+      {
+        "order": 2,
+        "type": "apply",
+        "value": "textScope"
+      }
+    ],
+    "titleStrategy": [
+      {
+        "order": 1,
+        "type": "xpath",
+        "value": "//*[@class='article--title']"
+      },
+      {
+        "order": 2,
+        "type": "apply",
+        "value": "textScope"
+      }
+    ]
+  }
+]

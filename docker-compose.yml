@@ -1,0 +1,14 @@
+version: '3.7'
+
+services:
+  it-scrapper-pre:
+    image: scrapperapp:latest
+    networks:
+      - traefik_itinternal
+    restart: unless-stopped
+    volumes:
+      - ${PWD}/Logs:/app/logs
+
+networks:
+  traefik_itinternal:
+    external: true
